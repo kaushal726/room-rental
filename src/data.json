@@ -1,0 +1,14 @@
+[
+  {
+    "id": 1,
+    "title": "Spacious Apartment in Downtown",
+    "description": "2 bedrooms, fully furnished, with a balcony and city view.",
+    "images": ["/images/room1.jpg", "/images/room2.jpg"]
+  },
+  {
+    "id": 2,
+    "title": "Cozy Studio Near the Beach",
+    "description": "1 bedroom studio with beach access, pet friendly.",
+    "images": ["/images/studio1.jpg", "/images/studio2.jpg"]
+  }
+]
