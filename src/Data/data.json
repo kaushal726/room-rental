@@ -1,0 +1,28 @@
+[
+  {
+    "id": 1,
+    "title": "Cozy Apartment",
+    "roomNumber": "101",
+    "balcony": "Yes",
+    "rent": "$800/month",
+    "contact": "555-1234",
+    "description": "A cozy and well-furnished apartment with a beautiful view.",
+    "images": [
+      "/images/logo.png",
+      "/images/logo.png"
+    ]
+  },
+  {
+    "id": 2,
+    "title": "Modern Studio",
+    "roomNumber": "102",
+    "balcony": "No",
+    "rent": "$950/month",
+    "contact": "555-5678",
+    "description": "Spacious modern studio with great lighting and amenities.",
+    "images": [
+      "/images/logo.png",
+      "/images/logo.png"
+    ]
+  }
+]

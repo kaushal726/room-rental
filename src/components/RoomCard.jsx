@@ -1,5 +1,4 @@
-// RoomCard.js
-import { Box, Image, Text, Heading, Button } from "@chakra-ui/react";
+import { Box, Image, Text, Heading } from "@chakra-ui/react";
 import { useNavigate } from "react-router-dom";
 
 const RoomCard = ({ room }) => {
@@ -7,7 +6,8 @@ const RoomCard = ({ room }) => {
 
   return (
     <Box
-      borderWidth="1px"
+      bgGradient="linear(to-b, blue.700, black)"
+      color="white"
       borderRadius="lg"
       overflow="hidden"
       boxShadow="lg"
@@ -19,7 +19,6 @@ const RoomCard = ({ room }) => {
       <Image src={room.images[0]} alt={room.title} borderRadius="md" />
       <Heading size="md" mt={4}>{room.title}</Heading>
       <Text mt={2} noOfLines={2}>{room.description}</Text>
-      <Button mt={4} colorScheme="teal">View Details</Button>
     </Box>
   );
 };
