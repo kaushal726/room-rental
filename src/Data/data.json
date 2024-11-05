@@ -2,15 +2,15 @@
   {
     "id": 1,
     "title": "Cozy Apartment",
-    "roomNumber": "101",
-    "balcony": "Yes",
-    "rent": "$800/month",
     "contact": "555-1234",
     "description": "A cozy and well-furnished apartment with a beautiful view.",
-    "images": [
-      "/images/logo.png",
-      "/images/logo.png"
-    ]
+    "numbersOfBedRooms": "101",
+    "numbersOfKitchen": "101",
+    "numbersOfWashroom": "101",
+    "balcony": "Yes",
+    "rent": "$800/month",
+    "images": ["/images/logo.png", "/images/logo.png"],
+    "isAvaliable": true
   },
   {
     "id": 2,
@@ -20,9 +20,7 @@
     "rent": "$950/month",
     "contact": "555-5678",
     "description": "Spacious modern studio with great lighting and amenities.",
-    "images": [
-      "/images/logo.png",
-      "/images/logo.png"
-    ]
+    "images": ["/images/logo.png", "/images/logo.png"],
+    "isAvaliable": true
   }
 ]
