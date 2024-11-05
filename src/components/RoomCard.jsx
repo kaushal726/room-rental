@@ -18,27 +18,24 @@ const RoomCard = ({ room }) => {
       cursor="pointer"
       _hover={{ transform: "scale(1.05)", transition: "0.3s" }}
     >
-      {/* Ensure room.images exists and is not empty */}
-      {room.images && room.images[0] && (
-        <Image src={room.images[0]} alt={room.title} borderRadius="md" />
-      )}
+      <Image src={room.images[0]} alt={room.title} borderRadius="md" />
       <Flex direction="column" mt={4}>
-        <Flex align="center" mb={2}>
-          <Icon as={FaHome} color="blue.300" mr={2} />
+        <Flex flexDir={"column"} align="center" mb={2}>
+          {/* <Icon as={FaHome} color="blue.300" mr={2} /> */}
           <Heading size="md" isTruncated>
             {room.title || "Room Title"}
           </Heading>
         </Flex>
 
         <Flex align="center" color="gray.200" fontSize="sm" mb={2}>
-          <Icon as={BsInfoCircleFill} color="blue.300" mr={2} />
+          {/* <Icon as={BsInfoCircleFill} color="blue.300" mr={2} /> */}
           <Text noOfLines={2}>
             {room.description || "No description available."}
           </Text>
         </Flex>
 
         <Flex align="center" color="gray.200" fontSize="sm">
-          <Icon as={FaDollarSign} color="blue.300" mr={2} />
+          {/* <Icon as={FaDollarSign} color="blue.300" mr={2} /> */}
           <Text>
             Rent: {room.rent ? `${room.rent} per month` : "Not specified"}
           </Text>

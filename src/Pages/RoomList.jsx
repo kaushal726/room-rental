@@ -13,13 +13,11 @@ const RoomList = () => {
       ) : error ? (
         <Text color="red.500">Error loading rooms</Text>
       ) : data && data.length > 0 ? (
-        <Flex>
-          <SimpleGrid columns={{ base: 1, md: 2, lg: 3 }} spacing={6}>
-            {data.map((room) => (
-              <RoomCard key={room.id} room={room} />
-            ))}
-          </SimpleGrid>
-        </Flex>
+        <SimpleGrid columns={{ base: 1, md: 2, lg: 3 }} spacing={6}>
+          {data.map((room) => (
+            <RoomCard key={room.id} room={room} />
+          ))}
+        </SimpleGrid>
       ) : (
         <Box>
           <Text color="white">No Rooms available now</Text>
