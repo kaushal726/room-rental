@@ -18,6 +18,7 @@ export const useData = () => {
           images: item.images
             ? item.images.split(",").map((tag) => tag.trim())
             : [],
+          isAvaliable: item.isAvaliable == "TRUE" ? true : false,
         }));
         setData(parsedData);
       } catch (error) {
