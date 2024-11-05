@@ -2,27 +2,16 @@ import { Box, SimpleGrid, Text } from "@chakra-ui/react";
 import RoomCard from "../components/RoomCard";
 import rooms from "../Data/data.json";
 import React, { useEffect, useState } from "react";
-import Tabletop from "tabletop";
-//https://sheetdb.io/api/v1/rvubes8k1601j
+import { useData } from "../Hooks/useData";
 const RoomList = () => {
-  const [data, setData] = useState([]);
-  useEffect(() => {
-    Tabletop.init({
-      key: "1r98Eh1al8V65lSw7sy6bVtaYm5hodFYGv7zrRZB4NpI",
-      simpleSheet: true,
-    })
-      .then((data) => {
-        setData(data);
-        console.log(data);
-      })
-      .catch((err) => console.error("Error fetching Google Sheets data:", err));
-  }, []);
+  const { data, loading, error } = useData();
+  console.log(data);
 
-  https: return (
+  return (
     <Box p={4} maxW="1200px" mx="auto">
       {rooms.length !== 0 ? (
         <SimpleGrid columns={{ base: 1, md: 2, lg: 3 }} spacing={6}>
-          {rooms.map((room) => (
+          {data.map((room) => (
             <RoomCard key={room.id} room={room} />
           ))}
         </SimpleGrid>
