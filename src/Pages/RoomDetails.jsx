@@ -2,13 +2,17 @@ import { Box, Text, Heading, Button, Flex, Stack } from "@chakra-ui/react";
 import { useNavigate, useParams } from "react-router-dom";
 import Slider from "react-slick";
 import { useData } from "../Hooks/useData";
+import { Loading } from "../components/Loading";
+import { ErrorPage } from "../components/Error";
+
 const RoomDetail = () => {
   const { id } = useParams();
   const { data, loading, error } = useData();
   const room = data.find((room) => room.id == parseInt(id));
   const navigate = useNavigate();
 
-  if (!room) return <Text color="white">Room not found</Text>;
+  if (loading) return <Loading />;
+  if (error) return <ErrorPage />;
 
   const settings = {
     dots: true,
