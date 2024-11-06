@@ -1,6 +1,6 @@
 import { Box, Image, Text, Heading, Flex, Icon } from "@chakra-ui/react";
+import { BsFillInfoCircleFill } from "react-icons/bs";
 import { FaDollarSign, FaHome } from "react-icons/fa";
-import { BsInfoCircleFill } from "react-icons/bs";
 import { useNavigate } from "react-router-dom";
 
 const RoomCard = ({ room }) => {
@@ -20,8 +20,8 @@ const RoomCard = ({ room }) => {
     >
       <Image src={room.images[0]} alt={room.title} borderRadius="md" />
       <Flex direction="column" mt={4}>
-        <Flex flexDir={"column"} align="center" mb={2}>
-          {/* <Icon as={FaHome} color="blue.300" mr={2} /> */}
+        <Flex flexDir={"row"} align="center" mb={2}>
+          <FaHome />
           <Heading size="md" isTruncated>
             {room.title || "Room Title"}
           </Heading>
@@ -29,6 +29,7 @@ const RoomCard = ({ room }) => {
 
         <Flex align="center" color="gray.200" fontSize="sm" mb={2}>
           {/* <Icon as={BsInfoCircleFill} color="blue.300" mr={2} /> */}
+          <BsFillInfoCircleFill />
           <Text noOfLines={2}>
             {room.description || "No description available."}
           </Text>
@@ -36,6 +37,7 @@ const RoomCard = ({ room }) => {
 
         <Flex align="center" color="gray.200" fontSize="sm">
           {/* <Icon as={FaDollarSign} color="blue.300" mr={2} /> */}
+          <FaDollarSign />
           <Text>
             Rent: {room.rent ? `${room.rent} per month` : "Not specified"}
           </Text>
