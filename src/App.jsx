@@ -2,7 +2,7 @@ import { ChakraProvider, defaultSystem } from "@chakra-ui/react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import RoomList from "./Pages/RoomList";
 import RoomDetail from "./Pages/RoomDetails";
-function App() {
+const App = () => {
   return (
     <ChakraProvider value={defaultSystem}>
       <BrowserRouter>
@@ -13,6 +13,6 @@ function App() {
       </BrowserRouter>
     </ChakraProvider>
   );
-}
+};
 
 export default App;
