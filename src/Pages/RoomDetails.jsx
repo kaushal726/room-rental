@@ -21,6 +21,7 @@ import {
   FaDollarSign,
   FaArrowLeft,
 } from "react-icons/fa";
+import { IoLocation } from "react-icons/io5";
 
 const RoomDetail = () => {
   const { id } = useParams();
@@ -100,42 +101,48 @@ const RoomDetail = () => {
         {/* Room Details with Icons */}
         <Stack spacing={4} mt={6} color="gray.200" fontSize="lg">
           <Flex align="center">
-            <FaHome size={20} style={{ marginRight: "8px" }} />
-            <Text>
+            <FaHome size={"16px"} style={{ marginRight: "8px" }} />
+            <Text fontSize={"16px"}>
               <strong>Room Number:</strong> {room.id}
             </Text>
           </Flex>
           <Flex align="center">
-            <FaBed size={20} style={{ marginRight: "8px" }} />
-            <Text>
+            <FaBed size={"16px"} style={{ marginRight: "8px" }} />
+            <Text fontSize={"16px"}>
               <strong>Bedrooms:</strong> {room.numbersOfBedRooms}
             </Text>
           </Flex>
           <Flex align="center">
-            <FaBath size={20} style={{ marginRight: "8px" }} />
-            <Text>
+            <FaBath size={"16px"} style={{ marginRight: "8px" }} />
+            <Text fontSize={"16px"}>
               <strong>Washrooms:</strong> {room.numbersOfWashroom}
             </Text>
           </Flex>
           <Flex align="center">
-            <FaUtensils size={20} style={{ marginRight: "8px" }} />
-            <Text>
+            <FaUtensils size={"16px"} style={{ marginRight: "8px" }} />
+            <Text fontSize={"16px"}>
               <strong>Kitchens:</strong> {room.numbersOfKitchen}
             </Text>
           </Flex>
           <Flex align="center">
-            <FaDollarSign size={20} style={{ marginRight: "8px" }} />
-            <Text>
+            <FaDollarSign size={"16px"} style={{ marginRight: "8px" }} />
+            <Text fontSize={"16px"}>
               <strong>Rent:</strong> ₹ {room.rent} per month
             </Text>
           </Flex>
           <Flex align="center">
-            <FaPhone size={20} style={{ marginRight: "8px" }} />
-            <Text>
+            <FaPhone size={"16px"} style={{ marginRight: "8px" }} />
+            <Text fontSize={"16px"}>
               <strong>Contact:</strong> {room.contact}
             </Text>
           </Flex>
-          <Text mt={2} fontSize="md">
+          <Flex align="center">
+            <IoLocation size={"16px"} style={{ marginRight: "8px" }} />
+            <Text fontSize={"16px"}>
+              <strong>Location:</strong> {room.address}
+            </Text>
+          </Flex>
+          <Text mt={2} fontSize={"16px"}>
             <strong>Description:</strong> {room.description}
           </Text>
 
