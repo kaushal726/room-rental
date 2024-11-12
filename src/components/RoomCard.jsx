@@ -21,6 +21,16 @@ const RoomCard = ({ room }) => {
       _hover={{ transform: "scale(1.05)", transition: "0.3s" }}
     >
       <Image src={room.images[0]} alt={room.title} borderRadius="md" />
+      <Text
+        textAlign={"center"}
+        color={"gray.300"}
+        fontSize={"14px"}
+        fontWeight={"400"}
+        mt={4}
+      >
+        Click for more Details
+      </Text>
+
       <Flex direction="column" mt={4}>
         <Flex
           flexDir={"row"}
