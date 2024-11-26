@@ -6,6 +6,8 @@ import ReactGA from "react-ga";
 const id = "G-3M46NFBEVV";
 const App = () => {
   ReactGA.initialize(id);
+  console.log("yes");
+
   ReactGA.pageview(window.location.pathname + window.location.search);
   return (
     <ChakraProvider value={defaultSystem}>
