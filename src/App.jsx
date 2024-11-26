@@ -3,9 +3,9 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import RoomList from "./Pages/RoomList";
 import RoomDetail from "./Pages/RoomDetails";
 import ReactGA from "react-ga";
-
+const id = "G-3M46NFBEVV";
 const App = () => {
-  ReactGA.initialize("370077440");
+  ReactGA.initialize(id);
   ReactGA.pageview(window.location.pathname + window.location.search);
   return (
     <ChakraProvider value={defaultSystem}>
